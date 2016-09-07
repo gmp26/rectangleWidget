@@ -1,0 +1,13 @@
+dependencies:
+  - name: rWrappers
+    version: 0.0.1
+    src: htmlwidgets/lib
+    script:
+      - rWrappers.js
+# (uncomment to add a dependency)
+# dependencies:
+#  - name:
+#    version:
+#    src:
+#    script:
+#    stylesheet:

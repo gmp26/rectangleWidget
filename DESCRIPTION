@@ -1,0 +1,9 @@
+Package: rectanglewidget
+Title: Draws squares and rectangles - a simple demo of a cljs react widget
+Version: 0.0.0.9000
+Authors@R: person("Mike", "Pearson", email = "gmp26@cam.ac.uk", role = c("aut", "cre"))
+Description: Demonstrates mounting a rum component as an htmlwidget in R
+Depends: R (>= 3.3.1)
+License: MIT
+Encoding: UTF-8
+LazyData: true

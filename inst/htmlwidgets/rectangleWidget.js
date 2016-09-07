@@ -1,3 +1,5 @@
+console.log("HTMLWidgets rectangleWidget loaded");
+
 HTMLWidgets.widget({
 
   name: 'rectangleWidget',
@@ -7,6 +9,7 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
 
     // TODO: define shared variables for this instance
+    console.log("calling factory");
 
     return {
 
@@ -24,6 +27,7 @@ HTMLWidgets.widget({
       resize: function(width, height) {
 
         // TODO: code to re-render the widget with a new size
+        console.log("resizing!");
 
       }
 

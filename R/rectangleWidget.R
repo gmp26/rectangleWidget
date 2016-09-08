@@ -3,13 +3,20 @@
 #' <Add Description>
 #'
 #' @import htmlwidgets
-#'
+#' @param fill a CSS colour specification
+#' @param w a CSS style width or percentage (e.g. "100px", "60%") for the rectangle
+#' @param h a CSS style height. Defaults to w
+#' @param width a CSS container width
+#' @param height a CSS container height
+#' @param elementId. May be necessary for multiple elements on page?
 #' @export
-rectangleWidget <- function(message, width = NULL, height = NULL, elementId = NULL) {
+rectangleWidget <- function(fill, w, h = NULL, width = NULL, height = NULL, elementId = NULL) {
 
   # forward options using x
   x = list(
-    message = message
+    fill = fill,
+    w = w,  # rectangle width (CSS style px or % in string)
+    h = if (is.null(h) || is.na(h)) w else h   # rectangle height (like w. If null, use w)
   )
 
   # create widget
@@ -40,7 +47,7 @@ rectangleWidget <- function(message, width = NULL, height = NULL, elementId = NU
 #' @name rectangleWidget-shiny
 #'
 #' @export
-rectangleWidgetOutput <- function(outputId, width = '100%', height = '400px'){
+rectangleWidgetOutput <- function(outputId, width = '100%', height = 200){
   htmlwidgets::shinyWidgetOutput(outputId, 'rectangleWidget', width, height, package = 'rectanglewidget')
 }
 

@@ -18,10 +18,8 @@ HTMLWidgets.widget({
         // TODO: code to render the widget, e.g.
         //el.innerText = x.message;
 
-        console.log("rendering!");
-        console.log("el", el);
         console.log("x", x);
-        rWrappers.tangleRectangle.renderSquare(el, "#fa0", "100px");
+        rWrappers.tangleRectangle.renderRectangle(el, x.fill, x.w, x.h);
 
       },
 
